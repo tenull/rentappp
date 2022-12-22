@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #242d38;
+  color:#efd592 ;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar-container{
+  width: 100%;
+  height: 150px;
+  background-color: #242d38;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ gap: 5px;
+  color: #efd592;
+}
+
+.navbar-container a {
+  text-decoration: none;
+  color: #efd592;
+}
+
+.calculator-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+}
+
+.renthouse-container{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.house-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 100px;
+
+}
+
+.house-preview{
+  border: 2px solid black;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #efd592;
+  color: #242d38;
+}
+
+.house-preview:hover{
+ transform :scale(1.1);
+  transition: transform .2s;
+}
+
+.house-preview img {
+  width: 400px;
+  height: 300px;
+  
+}
+
+button{
+  font-size: 14px;
+  height: 60px;
+  width: 250px;
+  background-color: #242d38;
+  border: 1px solid #efd592;
+  color: #efd592;
+}
+button:hover {
+  background-color: #efd592;
+  color: #242d38;
+  border: 1px solid #242d38;
+}
+
+.create{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.create form {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  gap: 5px;
+}
+.slider{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.inputfilter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.inputfilter input{
+  height: 25px;
+}
+
+.house-favorite{
+  background-color: #efd592;
+}
+
+.content{
+  background-color: #242d38;
+  color: #efd592;
+
+}

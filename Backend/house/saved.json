@@ -1,0 +1,36 @@
+{
+  "houses": [
+    {
+      "name": "Housesssdtra",
+      "squaremeter": "125",
+      "grossrent": "820",
+      "picture": "C:\\fakepath\\profile.jpg",
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "name": "1212121212",
+      "squaremeter": "1212",
+      "grossrent": "1212",
+      "picture": "C:\\fakepath\\profile.jpg",
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    }
+  ]
+}
