@@ -5,27 +5,27 @@
         "squaremeter": 77,
         "grossrent": 980,
         "picture": "/House1.jpg"
-      },
+    },
     {
         "id": 2,
         "name": "House in 3650",
         "squaremeter": 125,
         "grossrent": 980,
         "picture": "/house2.jpg"
-      },
-    {
-      "id": 3,
-      "name": "House in 3650",
-      "squaremeter": 57,
-      "grossrent": 980,
-      "picture": "/house3.jpg"
     },
     {
-      "id": 4,
-      "name": "Apartment in 8750 Judenburg",
-      "squaremeter": 98,
-      "grossrent": 1120,
-      "picture": "/house4.jpg"
+        "id": 3,
+        "name": "House in 3650",
+        "squaremeter": 57,
+        "grossrent": 980,
+        "picture": "/house3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Apartment in 8750 Judenburg",
+        "squaremeter": 98,
+        "grossrent": 1120,
+        "picture": "/house4.jpg"
     },
     {
         "id": 5,
@@ -33,47 +33,68 @@
         "squaremeter": 125,
         "grossrent": 675,
         "picture": "/house5.jpg"
-      },
-      {
+    },
+    {
         "id": 6,
         "name": "House in 7353",
         "squaremeter": 120,
         "grossrent": 975,
         "picture": "/house6.jpg"
-      },
-      {
+    },
+    {
         "id": 7,
         "name": "Commercial premise in 2870 Aspang Markt",
         "squaremeter": 110,
         "grossrent": 1050,
         "picture": "/house7.jpg"
-      },
-      {
+    },
+    {
         "id": 8,
         "name": "Commercial premise in 2870 Aspang Markt",
         "squaremeter": 100,
         "grossrent": 1120,
         "picture": "/house8.jpg"
-      },
-      {
+    },
+    {
         "id": 8,
         "name": "Commercial premise in 2870 Aspang Markt",
         "squaremeter": 120,
         "grossrent": 1250,
         "picture": "/house8.jpg"
-      },
-      {
+    },
+    {
         "id": 9,
         "name": "Commercial premise in 2870 Aspang Markt",
         "squaremeter": 80,
         "grossrent": 550,
         "picture": "/house9.jpg"
-      },
-      {
+    },
+    {
         "id": 10,
         "name": "Commercial premise in 2870 Aspang Markt",
         "squaremeter": 68,
         "grossrent": 750,
         "picture": "/house10.jpg"
-      }
-  ]
+    },
+    {
+        "id": 11,
+        "name": "TESZTELEK",
+        "squaremeter": "105",
+        "grossrent": "995",
+        "picture": "/cd927121b805c50e2a69b73d57c43af6.jpeg"
+    },
+    {
+        "id": 12,
+        "name": "TESZTTTELTEM",
+        "squaremeter": "55",
+        "grossrent": "985",
+        "picture": "/53747b129d1390026880543be80ac5f5.jpeg"
+    },
+    {
+        "id": 13,
+        "name": "125",
+        "squaremeter": "125",
+        "grossrent": "125",
+        "picture": "/ec4f18eb3bdd98a6f8cafda323a29f4f.jpeg"
+    }
+]

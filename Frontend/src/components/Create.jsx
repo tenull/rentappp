@@ -8,9 +8,9 @@ const Create = () => {
     const [squaremeter,setSquareMeter] = useState('');
     const [grossrent,setGrossrent]=useState('')
     const [isPending,setIsPending] = useState(false);
-    const[picture,setPicture]= useState('')
+    // const[picture,setPicture]= useState('')
  // const history = useHistory()
-    const[image,setImage] = useState('')
+    const[image,setImage] = useState({})
    
  const fileOnChange = (event) =>{
     setImage(event.target.files[0])
@@ -24,7 +24,8 @@ formData.append("squaremeter",squaremeter)
 formData.append("grossrent",grossrent)
 formData.append("picture", image)
 
-const test = {id,name, squaremeter, grossrent, picture}
+
+// const test = {id,name, squaremeter, grossrent, picture}
 
     fetch("http://localhost:8000/houses",{
         method:"post",
@@ -61,8 +62,8 @@ const test = {id,name, squaremeter, grossrent, picture}
     return ( 
         <div className="create">
             <h2>Add a new Rent</h2>
-        <input type="file" onChange={fileOnChange}  />
-        <button onClick={sendImage}>Upload</button>
+        {/* <input type="file" name="picture" required  onChange={fileOnChange}  />
+        <button onClick={sendImage}>Upload</button> */}
 
 
             <form onSubmit={handleSubmit}>
@@ -87,18 +88,20 @@ const test = {id,name, squaremeter, grossrent, picture}
                     value={grossrent}
                     onChange={(e) => setGrossrent(e.target.value)}
                 />
-                <input 
+                {/* <input 
                 type="file" 
                 name="picture" 
                 required
                 value={picture}
                 onChange={(e) => setPicture(e.target.value)}
-                />
-                
-                { !isPending && <button>Add rent</button>}
-                { isPending && <button disabled>Adding rent...</button>}
-                <p>{name}</p>
-                <p>{squaremeter}</p>
+                /> */}
+                        <input type="file" name="picture" required  onChange={fileOnChange}  />
+                {!isPending &&  <button onClick={sendImage}>Upload rent</button>}  
+                {isPending && <button  disabled>Uploaded rent</button>}              
+                {/* { !isPending && <button>Add rent</button>}
+                { isPending && <button disabled>Adding rent...</button>} */}
+                {/* <p>{name}</p>
+                <p>{squaremeter}</p> */}
             </form>
         </div>
      );

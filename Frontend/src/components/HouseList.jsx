@@ -5,10 +5,13 @@ import SavedRents from "./SavedRent";
 import { useHistory,useParams } from "react-router-dom";
 import RenthouseModal from "./RenthouseModal";
 import { Link } from "react-router-dom";
+import axios from 'axios';
+
+
 const HouseList = ({ houses,handleOpen }) => {
 
-  const { id } = useParams();
-  const { data} = useFetch('http://localhost:8000/houses/' + id);
+  // const { id } = useParams();
+  // const { data} = useFetch('http://localhost:8000/houses/' + id);
   // const [name, setName] = useState('');
   // const [squaremeter, setSquareMeter] = useState('');
   // const [grossrent, setGrossrent] = useState('')
@@ -35,24 +38,38 @@ const HouseList = ({ houses,handleOpen }) => {
 
   //   })
   // }
+
+
+
 function deleteUser(id){
 fetch(`http://localhost:8000/houses/${id}`,{
   method:'DELETE'
 }).then((result)=>{
   result.json().then((resp)=>{
 console.warn(resp)
+console.log(id)
   })
 })
 }
 
+// const handleDelete = async (id) => {
+//   try {
+//     await axios.delete(`http://localhost:8000/houses/${id}`);
 
-  const handleDelete = () => {
-    fetch('http://localhost:8000/houses/' + houses.id, {
-      method: 'DELETE',
-    }).then(() => {
-      history.push('/');
-    })
-  }
+//   } catch (error) {
+//     console.error(error);
+//     console.log(id)
+//   }
+// };
+
+
+  // const handleDelete = () => {
+  //   fetch('http://localhost:8000/houses/' + houses.id, {
+  //     method: 'DELETE',
+  //   }).then(() => {
+  //     history.push('/');
+  //   })
+  // }
 
   const removeFavorite = id => {
     let index = favorite.indexOf(id);
@@ -110,8 +127,8 @@ console.warn(resp)
 
           }
           )
-          .map((house) => (
-            <div className="house-preview" key={house.id}  >
+          .map((house,idx) => (
+            <div className="house-preview" key={idx}  >
               
               <h2 >{house.name}</h2>
               
