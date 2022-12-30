@@ -16,29 +16,37 @@ const style = {
   p: 4,
 };
 
-export default function BasicModal() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+export default function BasicModal({houses,open, actualData,handleClose,active,FavoriteIcon,removeFavorite,FavoriteBorderIcon,addToFavorite,BedIcon,KitchenIcon,HotTubIcon}) {
+console.log(actualData)
+
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
-      <Modal
+     
+  <div className="name">
+  <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+        <p>{actualData.name}</p>
+             
+              {/* {active ?
+              <FavoriteIcon onClick={() => removeFavorite(house.id)}/> :
+              <FavoriteBorderIcon onClick={()=>addToFavorite(house.id)}/> }
+               <img src={`http://localhost:8000${house.picture}`} alt="" />
+              <h2>Area: {house.squaremeter}m2</h2>
+              <h2><BedIcon/> : {house.bedroom}</h2>
+              <h2><KitchenIcon/> : {house.kitchen}</h2>
+              <h2><HotTubIcon/> : {house.bathroom}</h2>
+              <h2>Gross Rent:{house.grossrent}€</h2>
+              <h2>About the House: {house.text}</h2> */}
+              
         </Box>
       </Modal>
+      </div>
     </div>
   );
 }

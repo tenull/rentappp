@@ -1,5 +1,7 @@
+
 import * as React from 'react';
-import { styled, useTheme } from '@mui/material/styles';
+import { styled, useTheme} from '@mui/material/styles';
+
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -25,6 +27,12 @@ import Calculator from './Calculator';
 import Renthouse from './Renthouse';
 import Create from './Create';
 import SavedRents from './SavedRent';
+import LoginIcon from '@mui/icons-material/Login';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
+import { useState } from 'react';
+
+import Popup from './Login';
 
 
 const drawerWidth = 240;
@@ -75,11 +83,15 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
   justifyContent: 'flex-end',
+
 }));
+
+
 
 export default function PersistentDrawerLeft() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [buttonPopup,setButtonPopup] = useState(false)
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -90,10 +102,10 @@ export default function PersistentDrawerLeft() {
   };
 
   return (
-    <Box sx={{ display: 'flex', backgroundColor:"#242d38"}}>
+    <Box sx={{ display: 'flex',  backgroundColor:"#242d38"}}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}  >
-        <Toolbar sx={{ backgroundColor:"#242d38", borderBottom:"#242d38" }}>
+      <AppBar position="fixed" open={open}   >
+        <Toolbar sx={{ backgroundColor:"#242d38", borderBottom:"#242d38", display:'flex' }}>
           <IconButton
             color="#efd592"
             
@@ -104,9 +116,25 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon  sx={{ backgroundColor:"#242d38", color:"#efd592" }}/>
           </IconButton>
-          <Typography color="#efd592"  variant="h4" noWrap component="div">
-            Ren ten ten House
+          <img src="./house.png" alt="" className='house-logo' />
+          <div className="mainbar">
+          <Typography sx={{ fontFamily:"initial", display:'flex', flexWrap:'wrap'}} className='ren-ten-ten' color="#efd592"  variant="h4" noWrap component="div">
+            Rententen House
+            
           </Typography>
+          <div className="phone">
+          <PhoneIcon/> +36 70 823 4475
+          
+          </div>
+          <div className="email">
+          <EmailIcon/> t0csa91@gmail.com
+          </div>
+          <button  className='log-in' onClick={()=>setButtonPopup(true)}> <LoginIcon/> LOG IN</button> 
+
+          <Popup trigger = {buttonPopup} setTrigger={setButtonPopup}>
+            <h3>my popup</h3>
+          </Popup>
+          </div>
         </Toolbar>
       </AppBar>
       <Drawer

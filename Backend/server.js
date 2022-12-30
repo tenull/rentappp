@@ -195,6 +195,10 @@ app.delete('/houses/:id', (req, res) => {
     const newHouse = {
       id: lastHouseId + 1,
       name: req.body.name,
+      text: req.body.text,
+      bedroom:req.body.bedroom,
+      kitchen:req.body.kitchen,
+      bathroom:req.body.bathroom,
       squaremeter: req.body.squaremeter,
      grossrent: req.body.grossrent,
      picture: picture
