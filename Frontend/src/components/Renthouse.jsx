@@ -8,12 +8,12 @@ const Renthouse = () => {
     const history = useHistory()
 
     const handleDelete = () => {
-        fetch('http://localhost:8000/houses/' + house.id, {
-          method: 'DELETE',
-        }).then(() => {
-          history.push('/');
-        })
-      }
+      fetch("http://localhost:8000/houses/" + house.id, {
+        method: "DELETE",
+      }).then(() => {
+        history.push("/");
+      });
+    };
     
 
     return ( 

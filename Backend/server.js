@@ -96,16 +96,16 @@ app.get("/houses", (req, res) => {
 
 // })
 
-app.delete('/houses/:id', (req, res) => {
-  const data = fs.readFileSync(__dirname + "/house/house.json", 'utf8');
-  const json = JSON.parse(data);
-  const id = req.params.id;
-  const index = json.findIndex((item) => item.id === id);
-  json.splice(index, 1);
-  fs.writeFileSync(__dirname + "/house/house.json", JSON.stringify(json));
-  res.send(json);
+app.delete("/houses/:id", (req, res) => {
+  const data = fs.readFileSync(__dirname + "/house/house.json");
+  const houses = JSON.parse(data);
+  let house = houses.find((house) => house.id == req.params.id);
+  let index = houses.indexOf(house);
+  houses.splice(index, 1);
+  let newHouses = JSON.stringify(houses, null, 2);
+  fs.writeFileSync(__dirname + "/house/house.json", newHouses);
+  res.send(houses);
 });
-
 //__________________________________________	
 //   const uploadPath = __dirname + "/house/house.json";
 

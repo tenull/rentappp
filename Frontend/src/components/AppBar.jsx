@@ -30,6 +30,7 @@ import SavedRents from './SavedRent';
 import LoginIcon from '@mui/icons-material/Login';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useState } from 'react';
 
 import Popup from './Login';
@@ -129,11 +130,11 @@ export default function PersistentDrawerLeft() {
           <div className="email">
           <EmailIcon/> t0csa91@gmail.com
           </div>
-          <button  className='log-in' onClick={()=>setButtonPopup(true)}> <LoginIcon/> LOG IN</button> 
+          {/* <button  className='log-in' onClick={()=>setButtonPopup(true)}> <FavoriteIcon/></button> 
 
           <Popup trigger = {buttonPopup} setTrigger={setButtonPopup}>
-            <h3>my popup</h3>
-          </Popup>
+           
+          </Popup> */}
           </div>
         </Toolbar>
       </AppBar>
