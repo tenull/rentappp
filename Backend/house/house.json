@@ -1,149 +1,112 @@
 [
-  {
-    "id": 1,
-    "name": "House in 3650",
-    "squaremeter": 77,
-    "grossrent": 980,
-    "picture": "/House1.jpg"
-  },
-  {
-    "id": 4,
-    "name": "Apartment in 8750 Judenburg",
-    "squaremeter": 98,
-    "grossrent": 1120,
-    "picture": "/house4.jpg"
-  },
-  {
-    "id": 7,
-    "name": "Commercial premise in 2870 Aspang Markt",
-    "squaremeter": 110,
-    "grossrent": 1050,
-    "picture": "/house7.jpg"
-  },
-  {
-    "id": 8,
-    "name": "Commercial premise in 2870 Aspang Markt",
-    "squaremeter": 100,
-    "grossrent": 1120,
-    "picture": "/house8.jpg"
-  },
-  {
-    "id": 9,
-    "name": "Commercial premise in 2870 Aspang Markt",
-    "squaremeter": 80,
-    "grossrent": 550,
-    "picture": "/house9.jpg"
-  },
-  {
-    "id": 10,
-    "name": "Commercial premise in 2870 Aspang Markt",
-    "squaremeter": 68,
-    "grossrent": 750,
-    "picture": "/house10.jpg"
-  },
-  {
-    "id": 11,
-    "name": "TESZTELEK",
-    "squaremeter": "105",
-    "grossrent": "995",
-    "picture": "/cd927121b805c50e2a69b73d57c43af6.jpeg"
-  },
-  {
-    "id": 12,
-    "name": "TESZTTTELTEM",
-    "squaremeter": "55",
-    "grossrent": "985",
-    "picture": "/53747b129d1390026880543be80ac5f5.jpeg"
-  },
-  {
-    "id": 13,
-    "name": "125",
-    "squaremeter": "125",
-    "grossrent": "125",
-    "picture": "/ec4f18eb3bdd98a6f8cafda323a29f4f.jpeg"
-  },
-  {
-    "id": 14,
-    "name": "tellllmmeeee ",
-    "squaremeter": "99",
-    "grossrent": "1250",
-    "picture": "/29f6116002e567d6673ffa11b8185a77.jpeg"
-  },
-  {
-    "id": 16,
-    "name": "BestHouse",
-    "text": "LooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsum",
-    "squaremeter": "125",
-    "grossrent": "1450",
-    "picture": "/3d4cfc53a7481d111f1b36420999ac62.jpeg"
-  },
-  {
-    "id": 17,
-    "name": "BestHouse",
-    "text": "LooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsumLooooooooooooooremipsum",
-    "squaremeter": "125",
-    "grossrent": "1450",
-    "picture": "/a5eeb015c0b31a60c543dd0a5af81053.jpeg"
-  },
-  {
-    "id": 18,
-    "name": "test-elek",
-    "text": "test-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elek",
-    "squaremeter": "125",
-    "grossrent": "125",
-    "picture": "/2cd4f367ddb6a8a8caec9b198c2f298f.jpeg"
-  },
-  {
-    "id": 19,
-    "name": "test-elek",
-    "text": "test-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elektest-elek",
-    "bedroom": "2",
-    "squaremeter": "125",
-    "grossrent": "125",
-    "picture": "/ac9f61d14665eeffb76a756190b13bc1.jpeg"
-  },
-  {
-    "id": 20,
-    "name": "finnnna",
-    "text": "LoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLooooooooooooorem",
-    "bedroom": "1",
-    "kitchen": "0",
-    "bathroom": "110",
-    "squaremeter": "125",
-    "grossrent": "1550",
-    "picture": "/d31e0a327bed111900a23fe752c0bea0.jpeg"
-  },
-  {
-    "id": 21,
-    "name": "finnnna",
-    "text": "LoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLoooooooooooooremLooooooooooooorem",
-    "bedroom": "3",
-    "kitchen": "0",
-    "bathroom": "110",
-    "squaremeter": "125",
-    "grossrent": "1550",
-    "picture": "/8606c49ee43e620b7e990a8aa98676db.jpeg"
-  },
-  {
-    "id": 24,
-    "name": "Housethefines",
-    "text": "\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "bedroom": "2",
-    "kitchen": "1",
-    "bathroom": "3",
-    "squaremeter": "250",
-    "grossrent": "2550",
-    "picture": "/575b7e3a355e27e4580060f550704f03.jpeg"
-  },
-  {
-    "id": 25,
-    "name": "DaylastTest",
-    "text": "\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "bedroom": "1",
-    "kitchen": "2",
-    "bathroom": "5",
-    "squaremeter": "245",
-    "grossrent": "2125",
-    "picture": "/63d8d1c77fd0c42a3322b65593ecbde6.jpeg"
-  }
+    {
+        "id": 1,
+        "name": "Housethefines",
+        "text": "\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "bedroom": "2",
+        "kitchen": "1",
+        "bathroom": "3",
+        "squaremeter": "250",
+        "grossrent": "2550",
+        "picture": "/house1.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Testhouse",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "bedroom": "2",
+        "kitchen": "1",
+        "bathroom": "3",
+        "squaremeter": "125",
+        "grossrent": "1750",
+        "picture": "/7d5a5ce028fd751f01dc143fda995a9f.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Testhouse2.0",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "bedroom": "2",
+        "kitchen": "1",
+        "bathroom": "1",
+        "squaremeter": "65",
+        "grossrent": "950",
+        "picture": "/house3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Testhouse3.0",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "bedroom": "4",
+        "kitchen": "2",
+        "bathroom": "2",
+        "squaremeter": "155",
+        "grossrent": "2250",
+        "picture": "/house4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Testhouse4.0",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "bedroom": "2",
+        "kitchen": "1",
+        "bathroom": "1",
+        "squaremeter": "85",
+        "grossrent": "1050",
+        "picture": "/house5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Testhouse5.0",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "bedroom": "2",
+        "kitchen": "1",
+        "bathroom": "2",
+        "squaremeter": "155",
+        "grossrent": "1450",
+        "picture": "/house6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Testhouse6.0",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "bedroom": "2",
+        "kitchen": "2",
+        "bathroom": "2",
+        "squaremeter": "115",
+        "grossrent": "1950",
+        "picture": "/house7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Testhouse7.0",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "bedroom": "2",
+        "kitchen": "1",
+        "bathroom": "1",
+        "squaremeter": "100",
+        "grossrent": "1550",
+        "picture": "/house8.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Testhouse3.0",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "bedroom": "2",
+        "kitchen": "1",
+        "bathroom": "1",
+        "squaremeter": "75",
+        "grossrent": "950",
+        "picture": "/house9.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Testhouse3.0",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "bedroom": "4",
+        "kitchen": "2",
+        "bathroom": "2",
+        "squaremeter": "155",
+        "grossrent": "2550",
+        "picture": "/house10.jpg"
+    }
 ]

@@ -132,21 +132,67 @@ button:hover {
   color: #242d38;
   border: 1px solid #242d38;
 }
+.create-main h2{
+  display: flex;
+  justify-content: center;
+ margin :0
+}
 
 .create {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
+  color: #242d38;
+  background-color: #efd592;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding-left: 12rem;
+  padding-top: 1rem;  
+  padding-bottom: 1rem;
+  border-radius: 3rem
 }
 
 .create form {
   display: flex;
   flex-direction: column;
   max-width: 250px;
-  gap: 5px;
+  gap: 1px;
 }
 
+.create-container{
+display: flex;
+
+  
+}
+
+.main-information{
+  display: flex;
+  flex-direction: column;
+  width: 1rem;
+ 
+ 
+}
+.test{
+display: flex;
+gap: 20rem;
+}
+.counter{
+  display: flex;
+  gap: 1rem;
+}
+
+
+.btn__container {
+  display: flex;
+  width: 1rem;
+  gap: 1rem;
+  align-items: center;
+  
+}
+.upload{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 /* .create{
   display: flex;
   flex-direction: column;
@@ -162,9 +208,7 @@ button:hover {
   flex-direction: column;
 } */
 
-.counter {
-  display: flex;
-}
+
 
 .slider {
   display: flex;
@@ -314,7 +358,7 @@ button:hover {
 
 .searchbar {
   display: flex;
-  flex-direction: column;
+ 
   gap: 0.5rem;
   padding-bottom: 2rem;
 }
@@ -324,6 +368,7 @@ button:hover {
 .searchbar input {
   padding: 0.4rem;
   margin: 0.4rem;
+
 }
 
 .searchbar select {
@@ -357,16 +402,11 @@ button:hover {
   opacity: 1;
 }
 .rent-text {
-  width: 500px;
-  height: 500px;
+  width: 40rem;
+  height: 30rem;
 }
 
-.btn__container {
-  display: flex;
-  width: 1rem;
-  gap: 1rem;
-  align-items: center;
-}
+
 
 /* 
 .popup{
@@ -396,10 +436,12 @@ button:hover {
   color: #242d38;
   border-radius: 1rem;
   border: 1px solid #242d38;
-  transition: 1s;
   overflow-y: scroll;
 height: 500px;
 }
+
+
+
 
 .popup-inner p {
   margin: 0;
@@ -420,11 +462,23 @@ height: 500px;
   margin-top: 1rem;
 }
 
-.circle{
+.favorite-box{
   position: relative;
-  left:30rem;
+  left:25rem;
   background-color: #efd592;
   width: 1rem;
   height: 1rem;
+  display: flex;
+
 
 }
+
+.favorite-box p {
+  display: flex;
+  position: absolute;
+  left: 1.8rem;
+  bottom: -0.8rem;
+  font-size: 0.8rem;
+  
+}
+

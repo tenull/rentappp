@@ -1,3 +1,4 @@
+import { getFormHelperTextUtilityClasses } from "@mui/material";
 import { useState, useEffect } from "react";
 
 
@@ -7,6 +8,7 @@ const useFetch = (url) => {
     // const [name, setName] = useState('mario');
     const [isPending, setIsPending] = useState(true)
     const [error, setError] = useState(null)
+
 
     useEffect(() => {
         const abortCont = new AbortController();
@@ -37,6 +39,7 @@ const useFetch = (url) => {
     }, [url]);
 
     return { data, isPending, error }
+  
 }
 
 export default useFetch;

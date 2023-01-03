@@ -1,5 +1,5 @@
 import useFetch from "../useFetch";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import RangeSlider from "./GrossrentFilter";
 import SavedRents from "./SavedRent";
 import { useHistory, useParams } from "react-router-dom";
@@ -18,6 +18,9 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import { getFormHelperTextUtilityClasses } from "@mui/material";
+
+
 
 const style = {
   position: "absolute",
@@ -60,13 +63,16 @@ const HouseList = ({ houses, BasicModal, props, }) => {
   const [active, setActive] = useState(false);
   const [more, setMore] = useState(false);
   const [actualData, setActualData] = useState({});
-  const [openPopup, setOpenPopup] = useState(false);
-  const [trigger,setTrigger]= useState(false)
+  const [trigger, setTrigger] = useState(false)
+  const [bed,setBed]=useState("")
+  const [kitchen,setKitchen]=useState("")
+  const [bathroom,setBathroom]=useState("")
 
-  // const openForm = () =>setTrigger(false)
+
+
 
   const [open, setOpen] = React.useState(false);
-  // const handleOpen = () => setOpen(true);
+
   const handleOpen = (house) => {
     setOpen(true);
     setActualData(house);
@@ -87,6 +93,14 @@ const HouseList = ({ houses, BasicModal, props, }) => {
     setSearchMax(e.target.value);
   };
 
+  // const setBedValue = (e) => {
+  //   if (e.target.value < 0) {
+  //     return;
+  //   }
+  //   setBed(e.target.value);
+  // };
+
+
   // const handleSubmit = (e) => {
   //   e.preventDefault();
   //   const blog = house.name
@@ -104,6 +118,10 @@ const HouseList = ({ houses, BasicModal, props, }) => {
   //   })
   // }
 
+  function refreshPage() {
+    window.location.reload(false)
+  }
+
   function deleteHouse(id) {
     fetch(`http://localhost:8000/houses/${id}`, {
       method: "DELETE",
@@ -111,6 +129,7 @@ const HouseList = ({ houses, BasicModal, props, }) => {
       result.json().then((resp) => {
         console.warn(resp);
         console.log(id);
+        refreshPage()
       });
     });
   }
@@ -149,13 +168,13 @@ const HouseList = ({ houses, BasicModal, props, }) => {
     setActive(!active);
   };
   const result = houses.length;
-  const countFavorite =  favorite.length 
+  const countFavorite = favorite.length
 
   return (
     <div className="main">
-      <div className="circle"><button onClick={() => {
-            setTrigger(!trigger);
-          }}><FavoriteIcon/> {countFavorite === 0 ? countFavorite === '' : countFavorite}</button></div>
+      <div className="favorite-box"><button onClick={() => {
+        setTrigger(!trigger);
+      }}><FavoriteIcon /><p>{countFavorite === 0 ? countFavorite === '' : countFavorite}</p> </button></div>
       <div className="searchfiled">
         <div className="rental">
           {" "}
@@ -197,37 +216,30 @@ const HouseList = ({ houses, BasicModal, props, }) => {
 
         {more && (
           <div className="searchbar">
-            <div className="area">
-              <p>Area</p>
-              <input
-                type="number"
-                placeholder="Area min"
-                value={searchMax}
-                onChange={(event) => setSearchMaxValue(event)}
-              />
-              <span>m2 </span>
-              <span>x</span>
-              <input
-                type="number"
-                placeholder="Area min"
-                value={searchMax}
-                onChange={(event) => setSearchMaxValue(event)}
-              />
-              <span>m2</span>
-            </div>
+
             <div className="bed">
               <label for="bed">Number of beds:</label>
-              <select name="bed" id="bed">
-                <option value="0"></option>
+              <select name="bed" id="bed"value={bed} onChange={event => setBed(event.target.value)}  >
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div className="kitchen">
+              <label for="kitchen">Number of kitchens:</label>
+              <select name="kitchen" id="kitchen" value={kitchen} onChange={event => setKitchen(event.target.value)}>
+                <option value=""></option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
             </div>
-            <div className="kitchen">
-              <label for="kitchen">Number of kitchens:</label>
-              <select name="kitchen" id="kitchen">
-                <option value="0"></option>
+            <div className="bathroom">
+              <label for="bathroom">Number of bathroom:</label>
+              <select name="bathroom" id="batroom" value={bathroom} onChange={event => setBathroom(event.target.value)}>
+                <option value=""></option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -255,37 +267,52 @@ const HouseList = ({ houses, BasicModal, props, }) => {
                 return result;
               }
             })
+            .filter((result) => {
+              if (bed === "") {
+                return result;
+              } else if (bed == result.bedroom) {
+                return result;
+              }
+            })
+            .filter((result) => {
+              if (kitchen === "") {
+                return result;
+              } else if (kitchen == result.kitchen) {
+                return result;
+              }
+            })
+            .filter((result) => {
+              if (bathroom === "") {
+                return result;
+              } else if (bathroom == result.bathroom) {
+                return result;
+              }
+            })
             .map((house, idx) => (
               <div className="houses-box">
-              <div
-                className="house-preview"
-                key={idx}
-                onClick={
-                  () => handleOpen(house)
-                  //  setOpenPopup(true)
-                  // setAtcualData(house.house)
-                  // console.log(setAtcualData)
-                }
-              >
-                <h2>{house.name}</h2>
+                <div
+                  className="house-preview"
+                  key={idx}
+                  onClick={
+                    () => handleOpen(house)
+                  }
+                >
+                  <h2>{house.name}</h2>
 
-                {/* {active ?
+                  {/* {active ?
               <FavoriteIcon onClick={() => removeFavorite(house.id)}/> :
               <FavoriteBorderIcon onClick={()=>addToFavorite(house.id)}/> } */}
-                <img src={`http://localhost:8000${house.picture}`} alt="" />
-                <h2>Area: {house.squaremeter}m2</h2>
-                <h2>Gross Rent:{house.grossrent}€</h2>
-               
-              </div>
-              <div>
+                  <img src={`http://localhost:8000${house.picture}`} alt="" />
+                  <h2>Area: {house.squaremeter}m2</h2>
+                  <h2>Gross Rent:{house.grossrent}€</h2>
+
+                </div>
+                <div>
                   <button onClick={() => addToFavorite(house.id)}>Save</button>
                   <button onClick={() => deleteHouse(house.id)}>Delete</button>
                 </div>
               </div>
             ))}
-
-        {/* {openPopup && (<BasicModal actualData={actualData} handleClose={handleClose} />
-)} */}
 
         <Modal
           open={open}
@@ -319,33 +346,29 @@ const HouseList = ({ houses, BasicModal, props, }) => {
           </Box>
         </Modal>
 
-        {/* {house && house.filter(result=> {
-                 return result.grossrent ===  search
-      }
-      )} */}
       </div>
-    
-      <div className="house-list">
-      
-{    trigger &&   <div className="popup-inner">  
-      <h2>Saved Rentss</h2>
-    <button className="close-btn" onClick={() => {
-            setTrigger(!trigger);
-          }} >&times;</button> 
-        {findfavorite.map((house) => {
-          return (
-            <div key={house.id} className="houses-box-favorite">
-              <h2>{house.name}</h2>
 
-              <img src={`http://localhost:8000${house.picture}`} alt="" />
-              <h2>{house.squaremeter}m2</h2>
-              <h2>{house.grossrent}€</h2>
-              <button onClick={() => removeFavorite(house.id)}>Remove</button>
-            </div>
-          );
-        })}
-         </div>}
-    </div>
+      <div className="house-list"  >
+
+        {trigger && <div className="popup-inner">
+          <h2>Saved Rentss</h2>
+          <button className="close-btn" onClick={() => {
+            setTrigger(!trigger);
+          }} >&times;</button>
+          {findfavorite.map((house) => {
+            return (
+              <div key={house.id} className="houses-box-favorite" >
+                <h2>{house.name}</h2>
+
+                <img src={`http://localhost:8000${house.picture}`} alt="" />
+                <h2>{house.squaremeter}m2</h2>
+                <h2>{house.grossrent}€</h2>
+                <button onClick={() => removeFavorite(house.id)}>Remove</button>
+              </div>
+            );
+          })}
+        </div>}
+      </div>
     </div>
 
   );
