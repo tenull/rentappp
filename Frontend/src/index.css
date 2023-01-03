@@ -137,62 +137,105 @@ button:hover {
   justify-content: center;
  margin :0
 }
+.create-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
 
 .create {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+padding-left: 3rem;
   color: #242d38;
   background-color: #efd592;
-  margin-top: 2rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  padding-left: 12rem;
-  padding-top: 1rem;  
+  margin-top: 1vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
   padding-bottom: 1rem;
-  border-radius: 3rem
+  border-radius: 3rem;
+  width:50vw;
+  height: 130vh;
+  margin-bottom: 35rem;
+  align-items: center;
+  
+
 }
 
-.create form {
+/* .create form {
   display: flex;
   flex-direction: column;
   max-width: 250px;
   gap: 1px;
-}
+} */
 
 .create-container{
 display: flex;
 
   
 }
-
+.create input{
+  width: 30vw;
+}
 .main-information{
   display: flex;
   flex-direction: column;
-  width: 1rem;
+ align-items: flex-start;
+ gap: 1rem;
  
  
 }
 .test{
 display: flex;
-gap: 20rem;
+gap: 1rem;
+flex-wrap: wrap;
+width: 25vw;
+margin-bottom: 2rem;
+justify-content: space-between;
 }
 .counter{
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
-
+.counter2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap:1rem
+}
 
 .btn__container {
   display: flex;
-  width: 1rem;
+  width: 0.2rem;
   gap: 1rem;
   align-items: center;
-  
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.control__btn{
+  height: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.reset{
+  height: 2rem;
 }
 .upload{
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
+
+.upload input{
+  display: flex;
+  justify-content: center;
+  
+}
+
 /* .create{
   display: flex;
   flex-direction: column;
@@ -221,6 +264,7 @@ gap: 20rem;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .inputfilter input {
@@ -379,13 +423,15 @@ gap: 20rem;
   margin: 0;
   background-color: #efd592;
   color: #242d38;
-  width: 42rem;
+  width: 65vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
   border-radius: 1rem;
+  flex-wrap: wrap;
+
 }
 .rental {
   display: flex;
@@ -395,6 +441,7 @@ gap: 20rem;
   justify-content: center;
   font-weight: bolder;
   opacity: 1;
+
 }
 .rental-number {
   font-size: 5.5rem;
@@ -402,8 +449,8 @@ gap: 20rem;
   opacity: 1;
 }
 .rent-text {
-  width: 40rem;
-  height: 30rem;
+  width: 35vw;
+  height: 50vh;
 }
 
 
@@ -431,13 +478,13 @@ gap: 20rem;
   right: 18rem;
   padding: 3rem;
   width: 100%;
-  max-width: 640px;
+  max-width: 50vw;
   background-color: #efd592;
   color: #242d38;
   border-radius: 1rem;
   border: 1px solid #242d38;
   overflow-y: scroll;
-height: 500px;
+  height: 60vh;
 }
 
 
@@ -463,22 +510,50 @@ height: 500px;
 }
 
 .favorite-box{
-  position: relative;
-  left:25rem;
   background-color: #efd592;
-  width: 1rem;
+  width: 4rem;
   height: 1rem;
-  display: flex;
-
+  display: flex; 
+  align-items: center;
+  margin-bottom: 5rem;
 
 }
-
-.favorite-box p {
-  display: flex;
-  position: absolute;
-  left: 1.8rem;
-  bottom: -0.8rem;
-  font-size: 0.8rem;
+.favorite-box button{
+  width: 6rem;
+  padding-top: 0.5rem;
   
 }
 
+.favorite-box p {
+  position: relative;
+  left: 1rem;
+  bottom: 2.5rem;
+  font-size: 0.8rem;
+  
+}
+.main-box{
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.about-thehouse{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.create form {
+  display: flex;
+  flex-direction: column;
+align-items:flex-start;
+
+}
+
+.favorite__list h2{
+  margin: 0;
+
+}
+
+html{
+  background-color: #242d38;
+}

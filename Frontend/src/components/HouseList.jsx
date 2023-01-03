@@ -172,12 +172,13 @@ const HouseList = ({ houses, BasicModal, props, }) => {
 
   return (
     <div className="main">
-      <div className="favorite-box"><button onClick={() => {
-        setTrigger(!trigger);
-      }}><FavoriteIcon /><p>{countFavorite === 0 ? countFavorite === '' : countFavorite}</p> </button></div>
+      <div className="main-box">
+      
       <div className="searchfiled">
+      
         <div className="rental">
           {" "}
+         
           <div className="rental-number">{result}</div> available rentals{" "}
         </div>
         <div className="inputfilter">
@@ -247,6 +248,10 @@ const HouseList = ({ houses, BasicModal, props, }) => {
             </div>
           </div>
         )}
+      </div>
+      <div className="favorite-box"><button onClick={() => {
+        setTrigger(!trigger);
+      }}><FavoriteIcon /><p>{countFavorite === 0 ? countFavorite === '' : countFavorite}</p> </button></div>
       </div>
 
       {/* <RangeSlider /> */}
