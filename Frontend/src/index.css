@@ -79,12 +79,21 @@ code {
   transform: scale(1.05);
 }
 
-.houses-box img, .houses-box-favorite img {
+.houses-box img {
   margin-top: 0.5rem;
   width: 15rem;
   height: 15rem;
 }
+.houses-box-favorite img {
+  margin-top: 0.5rem;
+  width: 20vw;
+  height: 15vw;
+}
 .houses-box h2,.houses-box-favorite h2 {
+  margin: 0;
+}
+.houses-box-favorite h2 {
+  font-size: 2vw;
   margin: 0;
 }
 
@@ -94,8 +103,8 @@ code {
 }
 
 .houses-box-favorite{
-  max-width: 20rem;
-  max-height: 30rem;
+  max-width: 26vw;
+  max-height: 37vw;
   border: 2px solid black;
   padding: 1rem;
   background-color: #efd592;
@@ -112,6 +121,10 @@ code {
   text-align: center;
   cursor: pointer;
   
+}
+.houses-box-favorite button{
+  width: 13vw;
+  height: 5vw;
 }
 
 
@@ -475,7 +488,7 @@ justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 10rem;
-  right: 18rem;
+  right: 30vw;
   padding: 3rem;
   width: 100%;
   max-width: 50vw;
