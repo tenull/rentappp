@@ -16,13 +16,15 @@ code {
 
 .navbar-container {
   width: 100%;
-  height: 150px;
+  height: 200px;
   background-color: #242d38;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 5px;
   color: #efd592;
+  padding-left: 2rem;
+  padding-top: 4rem;
 }
 
 .navbar-container a {
@@ -531,10 +533,12 @@ justify-content: space-between;
   margin-bottom: 5rem;
 
 }
-.favorite-box button{
+.favorite-box button {
   width: 6rem;
-  padding-top: 0.5rem;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .favorite-box p {
@@ -569,4 +573,39 @@ align-items:flex-start;
 
 html{
   background-color: #242d38;
+}
+.phone a,
+.email a {
+  color: #efd592;
+  text-decoration: none;
+}
+.saved-rents h1{
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  margin:0
+}
+.rents{
+  display: flex;
+  gap:3rem;
+  flex-wrap: wrap;
+}
+
+.modal-icon{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.modal-icon h2 {
+  display: flex;
+  align-items: center;
+}
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+}
+.modal-picture{
+  display: flex;
+  justify-content: center;
 }

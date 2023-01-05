@@ -1,26 +1,13 @@
-import useFetch from "../useFetch";
 import { useState, useEffect } from "react";
-import RangeSlider from "./GrossrentFilter";
-import SavedRents from "./SavedRent";
-import { useHistory, useParams } from "react-router-dom";
-import RenthouseModal from "./RenthouseModal";
-import { Link } from "react-router-dom";
-import axios from "axios";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import BedIcon from "@mui/icons-material/Bed";
 import KitchenIcon from "@mui/icons-material/Kitchen";
 import HotTubIcon from "@mui/icons-material/HotTub";
 import SearchIcon from "@mui/icons-material/Search";
-import BasicModal from "./RenthouseModal";
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { getFormHelperTextUtilityClasses } from "@mui/material";
-
-
 
 const style = {
   position: "absolute",
@@ -48,30 +35,31 @@ const style = {
   },
 };
 
-const HouseList = ({ houses, BasicModal, props, }) => {
-  // const { id } = useParams();
-  // const { data} = useFetch('http://localhost:8000/houses/' + id);
-  // const [name, setName] = useState('');
-  // const [squaremeter, setSquareMeter] = useState('');
-  // const [grossrent, setGrossrent] = useState('')
-  const [isPending, setIsPending] = useState(false);
-  // const [picture, setPicture] = useState('')
-  const [favorite, setFavorite] = useState([]);
+const HouseList = ({ houses }) => {
+  const [favorites, setFavorites] = useState([]);
   const [search, setSearch] = useState("");
   const [searchMax, setSearchMax] = useState("");
-  const history = useHistory();
   const [active, setActive] = useState(false);
   const [more, setMore] = useState(false);
   const [actualData, setActualData] = useState({});
-  const [trigger, setTrigger] = useState(false)
-  const [bed,setBed]=useState("")
-  const [kitchen,setKitchen]=useState("")
-  const [bathroom,setBathroom]=useState("")
-
-
-
-
+  const [trigger, setTrigger] = useState(false);
+  const [bed, setBed] = useState("");
+  const [kitchen, setKitchen] = useState("");
+  const [bathroom, setBathroom] = useState("");
   const [open, setOpen] = React.useState(false);
+  const [numberOfHouses, setNumberOfHouses] = useState(0);
+
+  useEffect(() => {
+    const fav = JSON.parse(localStorage.getItem("favorites"));
+    if (fav) {
+      setFavorites(fav);
+    }
+  }, []);
+
+  useEffect(() => {
+    const houseBox = document.querySelectorAll(".houses-box");
+    setNumberOfHouses(houseBox.length);
+  }, [search, searchMax, bed, kitchen, bathroom]);
 
   const handleOpen = (house) => {
     setOpen(true);
@@ -83,43 +71,24 @@ const HouseList = ({ houses, BasicModal, props, }) => {
     if (e.target.value < 0) {
       return;
     }
-    setSearch(e.target.value);
+    setSearch(Number(e.target.value));
+    if (e.target.value === "") {
+      setSearch("");
+    }
   };
 
   const setSearchMaxValue = (e) => {
     if (e.target.value < 0) {
       return;
     }
-    setSearchMax(e.target.value);
+    setSearchMax(Number(e.target.value));
+    if (e.target.value === "") {
+      setSearchMax("");
+    }
   };
 
-  // const setBedValue = (e) => {
-  //   if (e.target.value < 0) {
-  //     return;
-  //   }
-  //   setBed(e.target.value);
-  // };
-
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const blog = house.name
-  //   setIsPending(true)
-  //   console.log(house)
-
-  //   fetch('http://localhost:4000/houses', {
-  //     method: 'POST',
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(blog)
-  //   }).then(() => {
-  //     console.log(blog)
-  //     setIsPending(false)
-
-  //   })
-  // }
-
   function refreshPage() {
-    window.location.reload(false)
+    window.location.reload(false);
   }
 
   function deleteHouse(id) {
@@ -129,132 +98,131 @@ const HouseList = ({ houses, BasicModal, props, }) => {
       result.json().then((resp) => {
         console.warn(resp);
         console.log(id);
-        refreshPage()
+        refreshPage();
       });
     });
   }
 
-  // const handleDelete = async (id) => {
-  //   try {
-  //     await axios.delete(`http://localhost:8000/houses/${id}`);
-
-  //   } catch (error) {
-  //     console.error(error);
-  //     console.log(id)
-  //   }
-  // };
-
-  // const handleDelete = () => {
-  //   fetch('http://localhost:8000/houses/' + houses.id, {
-  //     method: 'DELETE',
-  //   }).then(() => {
-  //     history.push('/');
-  //   })
-  // }
-
   const removeFavorite = (id) => {
-    let index = favorite.indexOf(id);
-    // console.log(index);
-    let temp = [...favorite.slice(0, index), ...favorite.slice(index + 1)];
-    setFavorite(temp);
+    let newFavorites = favorites.filter((house) => house.id !== id);
+    setFavorites(newFavorites);
+    localStorage.setItem("favorites", JSON.stringify(newFavorites));
     setActive(!active);
   };
-
-  let findfavorite = houses.filter((houses) => favorite.includes(houses.id));
 
   const addToFavorite = (id) => {
-    if (!favorite.includes(houses.id)) setFavorite(favorite.concat(id));
-    // console.log(id);
+    let house = houses.find((house) => house.id === id);
+    if (!favorites.includes(house)) {
+      setFavorites([...favorites, house]);
+      localStorage.setItem("favorites", JSON.stringify([...favorites, house]));
+    }
     setActive(!active);
   };
-  const result = houses.length;
-  const countFavorite = favorite.length
 
   return (
     <div className="main">
       <div className="main-box">
-      
-      <div className="searchfiled">
-      
-        <div className="rental">
-          {" "}
-         
-          <div className="rental-number">{result}</div> available rentals{" "}
-        </div>
-        <div className="inputfilter">
-          <p>Looking for the best price</p>
-          <input
-            type="number"
-            placeholder="Min Price"
-            value={search}
-            onChange={(event) => setSearchValue(event)}
-          />
+        <div className="searchfiled">
+          <div className="rental">
+            {" "}
+            <div className="rental-number">{numberOfHouses}</div> available
+            rentals{" "}
+          </div>
+          <div className="inputfilter">
+            <p>Looking for the best price</p>
+            <input
+              type="number"
+              placeholder="Min Price"
+              value={search}
+              onChange={(event) => setSearchValue(event)}
+            />
 
-          <input
-            type="number"
-            placeholder="Max Price"
-            value={searchMax}
-            onChange={(event) => setSearchMaxValue(event)}
-          />
-        </div>
-        <div
-          onClick={() => {
-            setMore(!more);
-          }}
-        >
-          {more ? (
-            <div className="showmore">
-              {" "}
-              <SearchIcon /> <p>Show Less</p>
-            </div>
-          ) : (
-            <div className="showmore">
-              {" "}
-              <SearchIcon /> <p>Show More</p>
+            <input
+              type="number"
+              placeholder="Max Price"
+              value={searchMax || ""}
+              onChange={(event) => setSearchMaxValue(event)}
+            />
+          </div>
+          <div
+            onClick={() => {
+              setMore(!more);
+            }}
+          >
+            {more ? (
+              <div className="showmore">
+                {" "}
+                <SearchIcon /> <p>Show Less</p>
+              </div>
+            ) : (
+              <div className="showmore">
+                {" "}
+                <SearchIcon /> <p>More filters</p>
+              </div>
+            )}
+          </div>
+
+          {more && (
+            <div className="searchbar">
+              <div className="bed">
+                <label htmlFor="bed">Number of beds:</label>
+                <select
+                  name="bed"
+                  id="bed"
+                  value={bed}
+                  onChange={(event) => setBed(event.target.value)}
+                >
+                  <option value=""></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+              <div className="kitchen">
+                <label htmlFor="kitchen">Number of kitchens:</label>
+                <select
+                  name="kitchen"
+                  id="kitchen"
+                  value={kitchen}
+                  onChange={(event) => setKitchen(event.target.value)}
+                >
+                  <option value=""></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div className="bathroom">
+                <label htmlFor="bathroom">Number of bathroom:</label>
+                <select
+                  name="bathroom"
+                  id="batroom"
+                  value={bathroom}
+                  onChange={(event) => setBathroom(event.target.value)}
+                >
+                  <option value=""></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
             </div>
           )}
         </div>
-
-        {more && (
-          <div className="searchbar">
-
-            <div className="bed">
-              <label for="bed">Number of beds:</label>
-              <select name="bed" id="bed"value={bed} onChange={event => setBed(event.target.value)}  >
-                <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-            </div>
-            <div className="kitchen">
-              <label for="kitchen">Number of kitchens:</label>
-              <select name="kitchen" id="kitchen" value={kitchen} onChange={event => setKitchen(event.target.value)}>
-                <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-            </div>
-            <div className="bathroom">
-              <label for="bathroom">Number of bathroom:</label>
-              <select name="bathroom" id="batroom" value={bathroom} onChange={event => setBathroom(event.target.value)}>
-                <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-            </div>
-          </div>
-        )}
+        <div className="favorite-box">
+          <button
+            onClick={() => {
+              setTrigger(!trigger);
+            }}
+          >
+            <FavoriteIcon />
+            {favorites.length === 0
+              ? favorites.length === ""
+              : favorites.length}
+          </button>
+        </div>
       </div>
-      <div className="favorite-box"><button onClick={() => {
-        setTrigger(!trigger);
-      }}><FavoriteIcon /><p>{countFavorite === 0 ? countFavorite === '' : countFavorite}</p> </button></div>
-      </div>
-
-      {/* <RangeSlider /> */}
       <div className="house-list">
         {houses &&
           houses
@@ -294,23 +262,16 @@ const HouseList = ({ houses, BasicModal, props, }) => {
               }
             })
             .map((house, idx) => (
-              <div className="houses-box">
+              <div className="houses-box" key={idx}>
                 <div
                   className="house-preview"
                   key={idx}
-                  onClick={
-                    () => handleOpen(house)
-                  }
+                  onClick={() => handleOpen(house)}
                 >
                   <h2>{house.name}</h2>
-
-                  {/* {active ?
-              <FavoriteIcon onClick={() => removeFavorite(house.id)}/> :
-              <FavoriteBorderIcon onClick={()=>addToFavorite(house.id)}/> } */}
                   <img src={`http://localhost:8000${house.picture}`} alt="" />
                   <h2>Area: {house.squaremeter}m2</h2>
                   <h2>Gross Rent:{house.grossrent}€</h2>
-
                 </div>
                 <div>
                   <button onClick={() => addToFavorite(house.id)}>Save</button>
@@ -326,7 +287,8 @@ const HouseList = ({ houses, BasicModal, props, }) => {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <p>{actualData.name}</p>
+            <div className="modal-header">
+            <h1>{actualData.name}</h1>
 
             {active ? (
               <FavoriteIcon onClick={() => removeFavorite(actualData.id)} />
@@ -335,7 +297,11 @@ const HouseList = ({ houses, BasicModal, props, }) => {
                 onClick={() => addToFavorite(actualData.id)}
               />
             )}
+            </div>
+            <div className="modal-picture">
             <img src={`http://localhost:8000${actualData.picture}`} alt="" />
+            </div>
+            <div className="modal-icon">
             <h2>Area: {actualData.squaremeter}m2</h2>
             <h2>
               <BedIcon /> : {actualData.bedroom}
@@ -346,36 +312,49 @@ const HouseList = ({ houses, BasicModal, props, }) => {
             <h2>
               <HotTubIcon /> : {actualData.bathroom}
             </h2>
-            <h2>Gross Rent:{actualData.grossrent}€</h2>
+            </div>
+            <h2>Gross Rent: {actualData.grossrent}€</h2>
             <h2>About the House: {actualData.text}</h2>
           </Box>
         </Modal>
-
       </div>
 
-      <div className="house-list"  >
+      <div className="house-list">
+        {trigger && (
+          <div className="popup-inner">
+            <h2>Saved Rents</h2>
+            <button
+              className="close-btn"
+              onClick={() => {
+                setTrigger(!trigger);
+              }}
+            >
+              &times;
+            </button>
+            {favorites.length > 0 ? (
+              favorites.map((house) => {
+                return (
+                  <div key={house.id} className="houses-box-favorite">
+                    <h2>{house.name}</h2>
 
-        {trigger && <div className="popup-inner">
-          <h2>Saved Rentss</h2>
-          <button className="close-btn" onClick={() => {
-            setTrigger(!trigger);
-          }} >&times;</button>
-          {findfavorite.map((house) => {
-            return (
-              <div key={house.id} className="houses-box-favorite" >
-                <h2>{house.name}</h2>
-
-                <img src={`http://localhost:8000${house.picture}`} alt="" />
-                <h2>{house.squaremeter}m2</h2>
-                <h2>{house.grossrent}€</h2>
-                <button onClick={() => removeFavorite(house.id)}>Remove</button>
+                    <img src={`http://localhost:8000${house.picture}`} alt="" />
+                    <h2>{house.squaremeter}m2</h2>
+                    <h2>{house.grossrent}€</h2>
+                    <button onClick={() => removeFavorite(house.id)}>
+                      Remove
+                    </button>
+                  </div>
+                );
+              })
+            ) : (
+              <div>
+                <h2>No saved Rents</h2>
               </div>
-            );
-          })}
-        </div>}
+            )}
+          </div>
+        )}
       </div>
     </div>
-
   );
 };
 

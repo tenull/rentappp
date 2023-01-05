@@ -8,11 +8,12 @@ const Navbar = () => {
     return ( 
     <div className="navbar-container"  >
         <Link to="/"> <HomeIcon/>  Home</Link>
-        <Link to="/calculator"><CalculateIcon/> Calculator</Link>
+        <Link to="/create" ><AddHomeIcon/> New Rent</Link>
+        <Link to="/saved"><OtherHousesIcon/> Saved Rent</Link> 
+        {/* <Link to="/calculator"><CalculateIcon/> Calculator</Link> */}
         {/* <a href="">Area Calculator</a>
         <a href="">Saved properties</a> */}
-        <Link to="/create" ><AddHomeIcon/> New Rent</Link>
-        <Link to="/saved"><OtherHousesIcon/> Saved Rent</Link>
+       
     </div>
      );
 }

@@ -14,12 +14,6 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import Navbar from './Navbar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from '../Home';
@@ -30,11 +24,7 @@ import SavedRents from './SavedRent';
 import LoginIcon from '@mui/icons-material/Login';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useState } from 'react';
-
-import Popup from './Login';
-
 
 const drawerWidth = 240;
 
@@ -117,19 +107,19 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon  sx={{ backgroundColor:"#242d38", color:"#efd592" }}/>
           </IconButton>
-          <img src="./house.png" alt="" className='house-logo' />
+         <a href="/"> <img  src="./house.png" alt="" className='house-logo' /></a>
           <div className="mainbar">
           <Typography sx={{ fontFamily:"initial", display:'flex', flexWrap:'wrap'}} className='ren-ten-ten' color="#efd592"  variant="h4" noWrap component="div">
             Rententen House
             
           </Typography>
           <div className="phone">
-          <PhoneIcon/> +36 70 823 4475
-          
-          </div>
-          <div className="email">
-          <EmailIcon/> t0csa91@gmail.com
-          </div>
+              <PhoneIcon /> <a href="tel:+36 70 207 4102">+36 70 207 4102</a>
+            </div>
+            <div className="email">
+              <EmailIcon />{" "}
+              <a href="mailto:t0csa91@gmail.com">t0csa91@gmail.com</a>
+            </div>
           {/* <button  className='log-in' onClick={()=>setButtonPopup(true)}> <FavoriteIcon/></button> 
 
           <Popup trigger = {buttonPopup} setTrigger={setButtonPopup}>
@@ -151,6 +141,7 @@ export default function PersistentDrawerLeft() {
         variant="persistent"
         anchor="left"
         open={open}
+        onClick={handleDrawerClose}
       >
         <DrawerHeader  >
           <IconButton onClick={handleDrawerClose}>
@@ -166,31 +157,6 @@ export default function PersistentDrawerLeft() {
       <Main open={open} sx={{ backgroundColor:"#242d38", color:"#efd592", }}>
         <DrawerHeader  />
         <Router  >
-      {/* <AppBar/>
-      <div className="App">
-     <div className="content">
-        <Switch>
-        <Route exact path="/">
-              <Home />
-            </Route>
-            
-        <Route path="/calculator">
-            <Calculator/>
-          </Route>
-          <Route path="/rent">
-           <Renthouse /> 
-          </Route>
-          
-          <Route path="/create">
-            <Create />
-          </Route>
-          <Route path="/saved">
-            <SavedRents />
-          </Route>
-        </Switch>
-        </div>
-      </div> */}
-
     </Router>
       </Main>
     </Box>

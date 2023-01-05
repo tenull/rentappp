@@ -53,8 +53,6 @@ const Create = () => {
     }
 
 
-    // const[picture,setPicture]= useState('')
-    // const history = useHistory()
     const [image, setImage] = useState({})
 
     const fileOnChange = (event) => {
@@ -75,9 +73,6 @@ const Create = () => {
 
 
 
-
-        // const test = {id,name, squaremeter, grossrent, picture}
-
         fetch("http://localhost:8000/houses", {
             method: "post",
             body: formData,
@@ -92,15 +87,11 @@ const Create = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         let formData = new FormData()
-        // formData.append('file','text')
-        const blog = { id, name, squaremeter, grossrent, image }
+
         setIsPending(true)
 
         fetch('http://localhost:8000/houses', {
             method: 'POST',
-            // headers:{"Content-Type": "application/json"},
-            // "Accept": "application/json"},
-            // body: FormData
             body: formData
         }).then((res) => {
             console.log('logsa')
@@ -148,40 +139,40 @@ const Create = () => {
                                 </div>
                             </div>
                             <div className="counter2">
-                            <div className="counter">
-                                <label>Number of bedroom</label>
+                                <div className="counter">
+                                    <label>Number of bedroom</label>
 
-                                <div className="btn__container">
-                                    <button className="control__btn" onClick={decrease}>-</button>
-                                    <span className="counter__output" value={bedroom} onChange={(e) => setBedroom(e.target.value)}>{counter}</span>
+                                    <div className="btn__container">
+                                        <button className="control__btn" onClick={decrease}>-</button>
+                                        <span className="counter__output" value={bedroom} onChange={(e) => setBedroom(e.target.value)}>{counter}</span>
 
-                                    <button className="control__btn" onClick={increase}>+</button>
-                                    <button className="reset" onClick={reset}>Reset</button>
+                                        <button className="control__btn" onClick={increase}>+</button>
+                                        <button className="reset" onClick={reset}>Reset</button>
+                                    </div>
+
+
                                 </div>
 
-                                
-                            </div>
+                                <div className="counter">
+                                    <label>Number of kitchen</label>
 
-                            <div className="counter">
-                                <label>Number of kitchen</label>
-
-                                <div className="btn__container">
-                                    <button className="control__btn" onClick={decreaseKithcen}>-</button>
-                                    <span className="counter__output" value={kitchen} onChange={(e) => setKitchen(e.target.value)}>{counterKitchen}</span>
-                                    <button className="control__btn" onClick={increaseKitchen}>+</button>
-                                    <button className="reset" onClick={resetKitchen}>Reset</button>
+                                    <div className="btn__container">
+                                        <button className="control__btn" onClick={decreaseKithcen}>-</button>
+                                        <span className="counter__output" value={kitchen} onChange={(e) => setKitchen(e.target.value)}>{counterKitchen}</span>
+                                        <button className="control__btn" onClick={increaseKitchen}>+</button>
+                                        <button className="reset" onClick={resetKitchen}>Reset</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="counter">
-                                <label>Number of bathroom</label>
+                                <div className="counter">
+                                    <label>Number of bathroom</label>
 
-                                <div className="btn__container">
-                                    <button className="control__btn" onClick={decreaseBathroom}>-</button>
-                                    <span className="counter__output" value={bathroom} onChange={(e) => setBathroom(e.target.value)}>{counterBathroom}</span>
-                                    <button className="control__btn" onClick={increaseBathroom}>+</button>
-                                    <button className="reset" onClick={resetBathroom}>Reset</button>
+                                    <div className="btn__container">
+                                        <button className="control__btn" onClick={decreaseBathroom}>-</button>
+                                        <span className="counter__output" value={bathroom} onChange={(e) => setBathroom(e.target.value)}>{counterBathroom}</span>
+                                        <button className="control__btn" onClick={increaseBathroom}>+</button>
+                                        <button className="reset" onClick={resetBathroom}>Reset</button>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                         <div className="about-thehouse">
@@ -195,9 +186,9 @@ const Create = () => {
                             ></textarea>
                         </div>
                         <div className="upload">
-                        <input type="file" name="picture" required onChange={fileOnChange} />
-                        {!isPending && <button onClick={sendImage}>Upload rent</button>}
-                        {isPending && <button disabled>Uploaded rent</button>}
+                            <input type="file" name="picture" required onChange={fileOnChange} />
+                            {!isPending && <button onClick={sendImage}>Upload rent</button>}
+                            {isPending && <button disabled>Uploaded rent</button>}
                         </div>
 
                     </form>
